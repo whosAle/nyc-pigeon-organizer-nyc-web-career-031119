@@ -9,10 +9,9 @@ def nyc_pigeon_organizer(data)
         result_hash[name][atr] = [type.to_s]
       else
         result_hash[name][atr] << type.to_s
-        #      result_hash.merge!(name => {atr => [type.to_s]})
+        # result_hash.merge!(name => {atr => [type.to_s]})
       end
     end
   end}}
-  # puts result_hash
   result_hash
 end
