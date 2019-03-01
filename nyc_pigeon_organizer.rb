@@ -7,5 +7,6 @@ def nyc_pigeon_organizer(data)
       result_hash[name][atr] << type
     end
   end}
+  puts result_hash
   result_hash
 end
