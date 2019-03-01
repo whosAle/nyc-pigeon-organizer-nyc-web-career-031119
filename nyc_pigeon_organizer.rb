@@ -3,7 +3,6 @@ def nyc_pigeon_organizer(data)
   data.each { |atr, info| info.each { |type, names| names.each do |name|
     if !result_hash[name]
       result_hash[name]= {atr => [type.to_s]}
-      puts result_hash
     else
       if !result_hash[name][atr]
         result_hash[name][atr] = [type.to_s]
