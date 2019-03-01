@@ -1,14 +1,14 @@
 def nyc_pigeon_organizer(data)
   result_hash = {}
-  data.each { |atr, info| info.each do |type, name|
+  data.each { |atr, info| info.each { |type, names| names.each do |name|
     if !result_hash[name]
-      puts name.class
-      result_hash.merge!(name => {atr => [type.to_s]})
+      # puts name
+      result_hash[name]= {atr => [type.to_s]}
       puts result_hash
     else
       result_hash[name][atr] << type
     end
-  end}
+  end}}
   # puts result_hash
   result_hash
 end
