@@ -1,3 +1,10 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!
+  result_hash = {}
+  data.each { |atr, info| info.each do |type, name|
+    if !result_hash[name]
+      result_hash[name]= {atr => [type]}
+    else
+      result_hash[name][atr] << type
+    end
+  end}
 end
